@@ -42,7 +42,7 @@ public:
 
         search(element, parent, currentNode);
 
-        if (parent == NULL);
+        if (parent == NULL)
         {
             ROOT = newNode;
             return;
@@ -94,40 +94,37 @@ public:
 
    }
 
+   
    void preorder(Node *ptr)
-   {
-       
-        // Performs the postorder traversal of the tree
-
+    {
         if (ROOT == NULL)
         {
             cout << "Tree is empty" << endl;
             return;
         }
-
+ 
         if (ptr != NULL)
         {
-            preorder(ptr->leftchild);
             cout << ptr->info << " ";
+            preorder(ptr->leftchild);
             preorder(ptr->rightchild);
+            
         }
     }
+
     void postorder(Node *ptr)
     {
-       
-   
-       
         if (ROOT == NULL)
         {
             cout << "Tree is empty" << endl;
             return;
         }
-
+ 
         if (ptr != NULL)
         {
             postorder(ptr->leftchild);
-            cout << ptr->info << " ";
             postorder(ptr->rightchild);
+            cout << ptr->info << " ";
         }
     }
 
@@ -186,7 +183,6 @@ int main()
 
         case '5':
             return 0;
-        
         default:
         {
             cout << "Invalid option" << endl;
@@ -194,10 +190,10 @@ int main()
         }
         }
 
-    return 0;
-
-        
     
+   }
+
+   return 0;
 }
 
         
