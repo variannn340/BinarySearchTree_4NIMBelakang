@@ -57,9 +57,13 @@ public:
             parent->rightchild= newNode;
         }
 
-    }
+   }
 
-    
+   //This Function searces the current node of te specified node
+   //
+   void search(string element, Node *&parent, Node *&cureentNode);
+   
+
 
 
 };
